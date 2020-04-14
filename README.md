@@ -1,7 +1,7 @@
 # doc
 Workshop documentation.
 
-The workshop consists of the following labs, listed in recommended order:
+The workshop consists of the following labs, listed in increasing difficulty:
 * [dockerfile-exercise](https://github.com/ciber-openshift-workshop/openshift-dockerfile-exercise)
 * [web-console-deploy-image-exercise](https://github.com/ciber-openshift-workshop/openshift-web-console-deploy-image-exercise)
 * [openshift-configmap-secrets-exercise](https://github.com/ciber-openshift-workshop/openshift-configmap-secrets-exercise)
