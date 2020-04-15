@@ -1,0 +1,28 @@
+@startuml
+hide empty members
+
+class Project 
+
+class DeploymentConfiguration
+
+class BuildConfiguration
+
+class Build
+
+class ReplicationController
+
+class Pod
+
+class Container
+
+class Service
+
+class Route
+
+class ConfigMap
+
+class Secret
+
+class ImageStream
+
+@enduml
