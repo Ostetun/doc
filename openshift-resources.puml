@@ -6,24 +6,57 @@ class Project
 
 class DeploymentConfiguration
 
+Project "1" --> "*" DeploymentConfiguration
+
+DeploymentConfiguration "*" ..> "*" ConfigMap: configured by
+DeploymentConfiguration "*" ..> "*" Secret: configured by
+
 class BuildConfiguration
+
+Project "1" --> "*" BuildConfiguration
 
 class Build
 
+BuildConfiguration "1" --> "*" Build: creates
+
+Build "1" --> "1" Image: produces
+
 class ReplicationController
+
+DeploymentConfiguration "1" --> "*" ReplicationController : creates
 
 class Pod
 
+ReplicationController "1" --> "*" Pod : creates
+
 class Container
+
+Pod "1" --> "1..*" Container
 
 class Service
 
+Project "1" --> "*" Service
+
+Service "1" --> "1..*" Pod: load-balances internal requests to
+
+
 class Route
+
+Project "1" --> "*" Route
+
+Route "*" --> "1..*" Service: routes external requests to
 
 class ConfigMap
 
+Project "1" --> "*" ConfigMap
+
 class Secret
+
+Project "1" --> "*" Secret
 
 class ImageStream
 
+Project "1" --> "*" ImageStream
+
+ImageStream "*" ..> "1" Image : refers to
 @enduml
