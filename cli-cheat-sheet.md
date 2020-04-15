@@ -16,7 +16,8 @@ Command | Description
 ## Creating an Application
 Command | Description
 --------| -----------
-oc new-app [--name <NAME>] <DOCKER_IMAGE>\|<GIT_REPO>\|<TEMPLATE>\|... | Create the resource tree of an _application_ from a docker image, git repo, template, or ...
+`oc new-app [--name <NAME>] <DOCKER_IMAGE>\|<GIT_REPO>\|<TEMPLATE>\|...` | Create the resource tree of an _application_ from a docker image, git repo, template, or ...
+
 
 ## Getting information
 Command | Description
@@ -26,6 +27,7 @@ Command | Description
 `oc get <RESOURCE>` | Get brief summary information about a resource.
 `oc get <RESOURCE> -o json` | Get all information from a resource in JSON format.
 `oc get all` | Get summary information of all resources in the project.
+
 
 ## View Logs
 Command | Description
