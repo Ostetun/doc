@@ -34,6 +34,34 @@ Command | Description
 --------| -----------
 `oc logs <POD>` | View the log of a pod on stdout. Pods can also be indirectly referred to through an owning resource, like a BuildConfiguration.
 
+## Creating Resources
+Command | Description
+--------| -----------
+`oc create <TYPE> <NAME> ...` | Create a resource of type `<TYPE>` with the name `<NAME>`.
+
+## Deleting Resources
+Command | Description
+--------| -----------
+`oc delete <RESOURCE>` | Delete a resource
+`oc delete --all all` | Delete all (most) resources in the current project.
+`oc delete all -lapp=my-app` | Delete all (most) resources with the label `my-app` in the current project.
+
+## Managing Routes
+Command | Description
+--------| -----------
+`oc expose svc <SVC>` | Create a route to the service `<SVC`.
+`oc get route` | List all routes in the current project. 
+
+## Managing Environment Variables
+Command | Description
+--------| -----------
+`oc set env <RESOURCE>`... | Setenv. variables in `<RESOURCE>`. Resource is most conveniently a DeploymentConfig, but can also be more finegrained, like replication controller or pods.
+
+## Managing Propes
+Command | Description
+--------| -----------
+`oc set probe dc/<APP> --readiness|--liveness --get-url=...` | Set a HTTP probe on the deployment config of `APP`.
+
 ## Managing Builds
 Command | Description
 --------| -----------
