@@ -29,5 +29,26 @@ Internal load-balancer in front of pods. Pods are selected in the configuration 
 External load-balancer in front of services. Openshift allocates an externally accessible DNS name for the route, so we can 
 invoke a service from the outside of an Openshift cluster.
 
+## ConfigMap
+A map of configuration, much like a Java `HashMap` with additional metadata. ConfigMaps and Secrets below, is the
+recommended method of keeping configuration separate from image contents.
+
+## Secret 
+Pretty much identical to `ConfigMap`, except that values are hidden from plain sight (base64-encoded).
+
+## BuildConfiguration
+Defintion of a build process, with build inputs, outputs, build image and build strategies.
+
+## Build
+The process of creating a runnable image in Openshift.
+
+## ImageStream
+A concept Openshift uses to keep track of changes in Docker images.
+
+## Image
+Docker image. 
+
+
+
 
 
