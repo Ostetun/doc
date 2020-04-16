@@ -34,3 +34,8 @@ Command | Description
 --------| -----------
 `oc logs <POD>` | View the log of a pod on stdout. Pods can also be indirectly referred to through an owning resource, like a BuildConfiguration.
 
+## Managing Builds
+Command | Description
+--------| -----------
+`oc start-build <BC>` | Start a build of build configuration `<BC>` manually.
+
